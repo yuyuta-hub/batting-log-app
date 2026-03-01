@@ -397,7 +397,7 @@ export default function App() {
     <div style={{ padding: 24, maxWidth: 980, margin: "0 auto", fontFamily: "sans-serif" }}>
       <h1>⚾ 打席ログ</h1>
 
-      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
+      <div className="topBar">
         <button onClick={exportCSV}>⬇️ CSV出力</button>
         <button onClick={resetAll}>🗑️ 全データリセット</button>
         <div style={{ marginLeft: "auto" }}>
@@ -415,7 +415,7 @@ export default function App() {
 
       <h2>{editingId ? "✏️ 打席を編集" : "➕ 新しい打席を記録"}</h2>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(180px, 1fr))", gap: 10 }}>
+      <div className="formGrid">
         <label>
           日付
           <input type="date" value={date} onChange={(e) => setDate(e.target.value)} style={{ width: "100%" }} />
